@@ -1,5 +1,4 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
 
 async function getData(city) {
   const response = await fetch(
@@ -7,11 +6,40 @@ async function getData(city) {
   );
   const data = await response.json();
   console.log(data);
+
+  return {
+    list: data.list,
+    location: data.city.name,
+    date: data.list[0].dt_txt
+  };
 }
 
-function Home() {
+async function Home() {
   const ciudad = "cochabamba";
-  getData(ciudad);
+  const { list, location, date } = await getData(ciudad);
+  const currentDate = new Date().getDate();
+  const today = new Date(date);
+  let hasShownForecast = false;
+
+  const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+  const monthsOfYear = [
+    "ene",
+    "feb",
+    "mar",
+    "abr",
+    "may",
+    "jun",
+    "jul",
+    "ago",
+    "sep",
+    "oct",
+    "nov",
+    "dic"
+  ];
+
+  const formattedDate = `today - ${daysOfWeek[today.getDay()]} ${
+    today.getDate()
+  } ${monthsOfYear[today.getMonth()]}`;
 
   return (
     <div className="container">
@@ -24,7 +52,7 @@ function Home() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-record-circle"
+              className="bi bi-record-circle"
               viewBox="0 0 16 16"
             >
               <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -32,6 +60,34 @@ function Home() {
             </svg>
           </button>
         </div>
+      <div className="today">
+        {list.map((forecast, index) => {
+          const forecastDate = new Date(forecast.dt_txt).getDate();
+
+          if (!hasShownForecast && currentDate === forecastDate) {
+            hasShownForecast = true;
+
+            const temperatureKelvin = forecast.main.temp;
+            const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(1);
+            const weatherDescription = forecast.weather[0].description;
+
+            return (
+              <div key={index}>
+                <img
+                  className="icon"
+                  src={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                  alt={forecast.weather[0].description}
+                />
+                <p>{temperatureCelsius} °C</p>
+                <p>{weatherDescription}</p>
+                <p>{formattedDate}</p>
+                <p>{location}</p>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
       </div>
       <div className="info">
         <div className="change">
@@ -39,9 +95,13 @@ function Home() {
           <button>f</button>
         </div>
         <div className="days">
-          <a>5 days</a>
+          {
+            //data.map((forecast, index) => (
+            //  <h2 key={index}>{forecast.dt}</h2>
+            //))
+          }
         </div>
-        <div>
+        <div className="lights">
           <a>highlights</a>
           <div>
             <button>wind</button>
