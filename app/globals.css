@@ -1,0 +1,32 @@
+body {
+    max-width: 1440px;
+    background-color:hsl(248, 35%, 8%);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.time {
+    width: 400px;
+    height: 825px;
+    background-color: hsl(248, 35%, 8%);
+    background-image: url("../public/Cloud-background.png");
+    background-position:top;
+    background-repeat:no-repeat;
+    border: 2px solid white;
+    position:fixed;
+    padding-top: 50px;
+}
+.botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+
+
