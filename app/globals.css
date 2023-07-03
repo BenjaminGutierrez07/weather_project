@@ -6,24 +6,56 @@ body {
 }
 
 
+.container {
+    display: flex;
+}
 
+
+/*this is about the day*/
 .time {
-    width: 400px;
-    height: 825px;
-    background-color: hsl(248, 35%, 8%);
-    background-image: url("../public/Cloud-background.png");
-    background-position:top;
+    width: 350px;
+    height: 645px;
+    background-image: url("../public/nubes.png");
+    background-size: 550px;
+    background-position:center top 70px;
     background-repeat:no-repeat;
-    border: 2px solid white;
-    position:fixed;
-    padding-top: 50px;
+    background-color: hsl(234, 32%, 17%);
+    position:absolute;
+    padding-top: 15px;
+    background-blend-mode:soft-light;
 }
 .botones {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 50px;
+}
+.search {
+    width: 110px;
+    height: 30px;
+    background-color: hsl(230, 5%, 45%);
+    border: none;
+    border-radius: 2px;
+    color: hsl(230, 7%, 83%);
+}
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: hsl(230, 5%, 47%);
+    border: none;
+    border-radius: 150px;
+    color: hsl(230, 7%, 83%);
 }
 
+
+
+/*this is about the table*/
+.change {
+    display: flex;
+}
 
 
 
