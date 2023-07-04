@@ -10,10 +10,10 @@
 .up {
     display: flex;
     justify-content: space-evenly;
-    gap: 6rem;
+    gap: 3rem;
 }
 .down {
     display: flex;
     justify-content: space-evenly;
-    gap: 6rem;
+    gap: 3rem;
 }

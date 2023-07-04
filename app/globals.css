@@ -54,7 +54,7 @@ body {
 /*this is about the table*/
 .info{
     width: 65%;
-    padding: 40px 70px;
+    padding: 30px 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +63,8 @@ body {
     width: 700px;
     display: flex;
     justify-content: left;
+    margin-block-end: 20px;
+    color:hsl(230, 7%, 83%);
 }
 .change {
     width: 700px;
@@ -92,8 +94,9 @@ body {
 
 
 /*this the big icon*/
+
 .today {
-    height: 530px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +105,6 @@ body {
 .tempBox {
     display: flex;
     justify-content: center;
-    align-items: end;
 }
 .temp {
     margin: 0;
@@ -112,30 +114,38 @@ body {
     font-size: 70px;
 }
 .cel {
-    margin-block-end: 10px;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    color: white;
+    align-items: end;
+    color: hsl(240, 8%, 54%);
     font-size: 30px;
 }
 .description {
+    margin: 50px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: hsl(240, 8%, 54%);
+    font-size: 25px;
 }
 .date {
     display: flex;
     justify-content: center;
-    color: white;
+    color: hsl(240, 8%, 54%);
 }
 .locations {
     display: flex;
     justify-content: center;
-    color: white;
+    color: hsl(240, 8%, 54%);
+}
+.flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 .icon {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 

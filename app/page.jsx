@@ -11,18 +11,6 @@ function Home() {
       <Semana />
       <a className="subtitle">Today's Highlights</a>
       <Hight />
-        {/*<div className="lights">
-          
-            <a>highlights</a>
-          <div>
-            <button>wind</button>
-            <button>humidity</button>
-          </div>
-          <div>
-            <button>visibility</button>
-            <button>air</button>
-          </div>
-          </div>*/}
       </div>
     </div>
   );

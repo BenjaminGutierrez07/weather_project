@@ -1,5 +1,5 @@
 .air {
-    width: 300px;
+    width: 325px;
     height: 100px;
     background-color: hsl(234, 32%, 17%);
 }
@@ -9,4 +9,20 @@
     justify-content: center;
     align-items: center;
     color: hsl(240, 15%, 95%);
+}
+
+.nameA{
+    margin-block-end: 0;
+}
+.airC {
+    display: flex;
+}
+.numA {
+    margin: 0;
+    font-size: 30px;
+}
+.mb {
+    margin: 0;
+    display: flex;
+    align-items: center;
 }

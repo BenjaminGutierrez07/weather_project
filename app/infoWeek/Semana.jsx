@@ -10,8 +10,8 @@ export default function Semana () {
   return (
     <div className='dias'>
       <div className="change">
-        <button>c</button>
-        <button>f</button>
+        <button className='c'>°C</button>
+        <button className='f'>°F</button>
       </div>
       <div className="days">
         <Tomorrow />

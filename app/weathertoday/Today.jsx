@@ -39,7 +39,7 @@ async function Today() {
       "dic",
     ];
 
-    const formattedDate = `Today - ${
+    const formattedDate = `Today . ${
       daysOfWeek[today.getDay()]
     } ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
     console.log(formattedDate)
@@ -81,19 +81,34 @@ async function Today() {
             const weatherDescription = forecast.weather[0].description;
 
             return (
-              <div className='infos' key={index}>
+              <div className="infos" key={index}>
                 <img
                   className="icon"
                   src={`https://openweathermap.org/img/w/${weatherIcon}.png`}
                   alt={forecast.weather[0].description}
                 />
-                <div className='tempBox'>
-                <p className='temp'>{temperatureCelsius}</p>
-                <p className='cel'>°C</p>    
+                <div className="tempBox">
+                  <p className="temp">{temperatureCelsius}</p>
+                  <p className="cel">°C</p>
                 </div>
-                <p className='description'>{weatherDescription}</p>
-                <p className='date'>{formattedDate}</p>
-                <p className='locations'>{location}</p>
+                <p className="description">{weatherDescription}</p>
+                <p className="date">{formattedDate}</p>
+                <div className='flecha'>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-geo-alt-fill"
+                      viewBox="0 0 16 16"
+                      style={{color:'hsl(240, 8%, 54%)'}}
+                    >
+                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                  </p>
+                  <p className="locations">{location}</p>
+                </div>
               </div>
             );
           }

@@ -1,5 +1,5 @@
 .wind {
-    width: 300px;
+    width: 325px;
     height: 150px;
     background-color: hsl(234, 32%, 17%);
 }
@@ -9,4 +9,36 @@
     justify-content: center;
     align-items: center;
     color: hsl(240, 15%, 95%);
+}
+
+.num {
+    margin: 0;
+    font-size: 50px;
+}
+.numTwo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.numThree {
+    display: flex;
+    gap: 1rem;
+}
+.svg {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(230, 5%, 47%);
+    border-radius: 100px;
+}
+.nameW {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.line {
+    display: flex;
 }

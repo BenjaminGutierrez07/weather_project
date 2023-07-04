@@ -61,7 +61,11 @@ async function Air() {
 
             return (
               <div className="centerAir" key={index}>
-                <p>{airs}</p>
+                <p className='nameA'>Air Pressure</p>
+                <div className='airC'>
+                <p className='numA'>{airs}</p>
+                <p className='mb'>mb</p>
+                </div>
               </div>
             );
           }

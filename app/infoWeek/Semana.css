@@ -7,6 +7,13 @@
     
 }
 
+.c {
+    color: hsl(248, 35%, 8%);
+}
+.f {
+    background-color: hsl(230, 5%, 45%);
+    color: hsl(230, 7%, 83%);
+}
 .dias {
     width: 700px;
 }

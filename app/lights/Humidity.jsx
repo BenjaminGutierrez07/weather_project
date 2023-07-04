@@ -61,7 +61,12 @@ async function Humidity() {
 
             return (
               <div className="centerHumidity" key={index}>
-                <p>{humidid}</p>
+                <p>Humidity</p>
+                <div className='hu'>
+                <p className='huTwo'>{humidid}</p>
+                <p className='por'>%</p>
+                </div>
+
               </div>
             );
           }

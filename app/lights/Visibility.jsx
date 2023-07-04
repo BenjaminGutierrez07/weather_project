@@ -57,11 +57,16 @@ async function Visibility() {
 
             
             const visibili = forecast.visibility;
+            const miles = (visibili / 1000).toLocaleString();
             
 
             return (
               <div className="centerVisibility" key={index}>
-                <p>{visibili}</p>
+                <p className='nameV'>Visibility</p>
+                <div className='center'>
+                <p className='visi'>{miles}</p>
+                <p className='mi'>miles</p>
+                </div>
               </div>
             );
           }
