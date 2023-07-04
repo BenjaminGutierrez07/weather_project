@@ -1,4 +1,5 @@
 import Today from "./weathertoday/Today";
+import Semana from "./infoWeek/Semana";
 
 function Home() {
   
@@ -6,17 +7,7 @@ function Home() {
     <div className="container">
       <Today />
       <div className="info">
-        <div className="change">
-          <button>c</button>
-          <button>f</button>
-        </div>
-        <div className="days">
-          {
-            //data.map((forecast, index) => (
-            //  <h2 key={index}>{forecast.dt}</h2>
-            //))
-          }
-        </div>
+      <Semana />
         <div className="lights">
           <a>highlights</a>
           <div>

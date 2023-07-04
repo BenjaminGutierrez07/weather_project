@@ -5,7 +5,7 @@ async function getData(city) {
     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=67fe6a6f66b21320a216fea2c1e49ad5`
   );
   const data = await response.json();
-  console.log(data);
+  
 
   return {
     list: data.list,
@@ -42,6 +42,10 @@ async function Today() {
       daysOfWeek[today.getDay()]
     } ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
 
+    const isDaytime = (forecastDayTime) => {
+      const forecastTime = new Date(forecastDayTime).getHours();
+      return forecastTime >= 6 && forecastTime < 18;
+    };
 
   return (
     <div className="time">
@@ -64,25 +68,30 @@ async function Today() {
       <div className="today">
         {list.map((forecast, index) => {
           const forecastDate = new Date(forecast.dt_txt).getDate();
+          console.log(forecastDate);
 
           if (!hasShownForecast && currentDate === forecastDate) {
             hasShownForecast = true;
 
+            const weatherIcon = isDaytime(forecast.dt_txt) ? forecast.weather[0].icon : '01n';
             const temperatureKelvin = forecast.main.temp;
             const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(1);
             const weatherDescription = forecast.weather[0].description;
 
             return (
-              <div key={index}>
+              <div className='infos' key={index}>
                 <img
                   className="icon"
-                  src={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
+                  src={`https://openweathermap.org/img/w/${weatherIcon}.png`}
                   alt={forecast.weather[0].description}
                 />
-                <p>{temperatureCelsius} °C</p>
-                <p>{weatherDescription}</p>
-                <p>{formattedDate}</p>
-                <p>{location}</p>
+                <div className='tempBox'>
+                <p className='temp'>{temperatureCelsius}</p>
+                <p className='cel'>°C</p>    
+                </div>
+                <p className='description'>{weatherDescription}</p>
+                <p className='date'>{formattedDate}</p>
+                <p className='locations'>{location}</p>
               </div>
             );
           }

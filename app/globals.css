@@ -87,7 +87,47 @@ body {
 
 
 /*this the big icon*/
-
+.today {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tempBox {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.temp {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 70px;
+}
+.cel {
+    margin-block-end: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+.description {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.locations {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 .icon {
     width: 300px;
     height: 300px;
