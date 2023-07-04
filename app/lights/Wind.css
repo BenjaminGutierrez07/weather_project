@@ -1,0 +1,12 @@
+.wind {
+    width: 300px;
+    height: 150px;
+    background-color: hsl(234, 32%, 17%);
+}
+.centerWind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(240, 15%, 95%);
+}

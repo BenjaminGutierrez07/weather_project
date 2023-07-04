@@ -6,9 +6,9 @@ import Two from '../week/Two';
 import Three from '../week/Three';
 import Four from '../week/Four';
 
-export default function () {
+export default function Semana () {
   return (
-    <div>
+    <div className='dias'>
       <div className="change">
         <button>c</button>
         <button>f</button>

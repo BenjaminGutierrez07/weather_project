@@ -1,7 +1,12 @@
 .days {
-    width: 800px;
+    width: 700px;
     height: 150px;
     display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
+    margin-bottom: 70px;
+    justify-content: space-between;
+    
+}
+
+.dias {
+    width: 700px;
 }

@@ -18,11 +18,12 @@ async function getData(city) {
 
 async function Four() {
     const ciudad = "cochabamba";
-    const { list, location, date } = await getData(ciudad);
-    const currentDate = new Date().getDate();
-    const twoDay = new Date();
-    twoDay.setDate(currentDate + 5);
-    const twoDate = twoDay.getDate();
+    const { list } = await getData(ciudad);
+    const currentDate = new Date().getUTCDate();
+    const fourDay = new Date();
+    fourDay.setHours(fourDay.getHours() + fourDay.getTimezoneOffset() / 60);
+    fourDay.setDate(currentDate + 5);
+    const fourDate = fourDay.getDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -42,8 +43,8 @@ async function Four() {
     ];
 
     const formattedDate = ` ${
-      daysOfWeek[twoDay.getDay()]
-    } , ${twoDate} ${monthsOfYear[twoDay.getMonth()]}`;
+      daysOfWeek[fourDay.getDay()]
+    } , ${fourDate} ${monthsOfYear[fourDay.getMonth()]}`;
 
 
   return (
@@ -53,7 +54,7 @@ async function Four() {
           const forecastDate = new Date(forecast.dt_txt).getDate();
           console.log(forecastDate);
 
-          if (!hasShownForecast && twoDate === forecastDate) {
+          if (!hasShownForecast && fourDate === forecastDate) {
             hasShownForecast = true;
 
             
@@ -65,7 +66,7 @@ async function Four() {
             return (
               <div className='centerFour' key={index}>
                 <p>{formattedDate}</p>
-                <img className='iconTwo'
+                <img className='iconFour'
                   src={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
                   alt={forecast.weather[0].description}
                 />

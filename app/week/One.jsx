@@ -19,8 +19,9 @@ async function getData(city) {
 async function One() {
     const ciudad = "cochabamba";
     const { list, date } = await getData(ciudad);
-    const currentDate = new Date().getDate();
+    const currentDate = new Date().getUTCDate();
     const oneDay = new Date();
+    oneDay.setHours(oneDay.getHours() + oneDay.getTimezoneOffset() / 60);
     oneDay.setDate(currentDate + 2);
     const oneDate = oneDay.getDate();
     let hasShownForecast = false;

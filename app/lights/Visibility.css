@@ -1,0 +1,12 @@
+.visibility {
+    width: 300px;
+    height: 100px;
+    background-color: hsl(234, 32%, 17%);
+}
+.centerVisibility {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(240, 15%, 95%);
+}

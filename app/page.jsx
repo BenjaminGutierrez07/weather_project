@@ -1,5 +1,6 @@
 import Today from "./weathertoday/Today";
 import Semana from "./infoWeek/Semana";
+import Hight from "./hight/Hight";
 
 function Home() {
   
@@ -8,6 +9,8 @@ function Home() {
       <Today />
       <div className="info">
       <Semana />
+      <a className="subtitle">Today's Highlights</a>
+      <Hight />
         {/*<div className="lights">
           
             <a>highlights</a>

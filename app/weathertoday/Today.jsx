@@ -5,7 +5,7 @@ async function getData(city) {
     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=67fe6a6f66b21320a216fea2c1e49ad5`
   );
   const data = await response.json();
-  
+
 
   return {
     list: data.list,
@@ -18,8 +18,9 @@ async function getData(city) {
 async function Today() {
     const ciudad = "cochabamba";
     const { list, location, date } = await getData(ciudad);
-    const currentDate = new Date().getDate();
+    const currentDate = new Date().getUTCDate();
     const today = new Date(date);
+    today.setHours(today.getHours() + today.getTimezoneOffset() / 60);
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -41,10 +42,11 @@ async function Today() {
     const formattedDate = `Today - ${
       daysOfWeek[today.getDay()]
     } ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
+    console.log(formattedDate)
 
     const isDaytime = (forecastDayTime) => {
       const forecastTime = new Date(forecastDayTime).getHours();
-      return forecastTime >= 6 && forecastTime < 18;
+      return forecastTime >= 6 && forecastTime < 20;
     };
 
   return (

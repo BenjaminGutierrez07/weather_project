@@ -1,6 +1,6 @@
 .one {
     width: 130px;
-    height: 200px;
+    height: 170px;
     background-color: hsl(234, 32%, 17%);
 }
 .centerOne {
@@ -17,7 +17,7 @@
 }
 .iconOne {
     width: 100px;
-    height: 100px;
+    height: 70px;
 }
 .minOne {
     display: flex;

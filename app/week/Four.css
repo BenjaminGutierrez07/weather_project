@@ -1,6 +1,6 @@
 .four {
     width: 130px;
-    height: 200px;
+    height: 170px;
     background-color: hsl(234, 32%, 17%);
 }
 .centerFour {
@@ -17,7 +17,7 @@
 }
 .iconFour {
     width: 100px;
-    height: 100px;
+    height: 70px;
 }
 .minFour {
     display: flex;
