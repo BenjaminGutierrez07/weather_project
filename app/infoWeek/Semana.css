@@ -1,0 +1,8 @@
+.days {
+    width: 800px;
+    height: 150px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
