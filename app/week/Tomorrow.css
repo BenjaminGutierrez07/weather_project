@@ -1,0 +1,29 @@
+.tomorrow {
+    width: 130px;
+    height: 200px;
+    background-color: hsl(234, 32%, 17%);
+}
+.centerTomorrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(240, 15%, 95%);
+}
+.cant {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.iconTomo {
+    width: 100px;
+    height: 100px;
+}
+.min {
+    display: flex;
+    color: hsl(240, 15%, 95%);
+}
+.max {
+    display: flex;
+    color: hsl(240, 8%, 54%);
+}

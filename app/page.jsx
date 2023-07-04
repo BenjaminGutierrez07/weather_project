@@ -8,8 +8,9 @@ function Home() {
       <Today />
       <div className="info">
       <Semana />
-        <div className="lights">
-          <a>highlights</a>
+        {/*<div className="lights">
+          
+            <a>highlights</a>
           <div>
             <button>wind</button>
             <button>humidity</button>
@@ -18,7 +19,7 @@ function Home() {
             <button>visibility</button>
             <button>air</button>
           </div>
-        </div>
+          </div>*/}
       </div>
     </div>
   );

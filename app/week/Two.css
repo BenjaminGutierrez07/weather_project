@@ -1,0 +1,29 @@
+.two {
+    width: 130px;
+    height: 200px;
+    background-color: hsl(234, 32%, 17%);
+}
+.centerTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(240, 15%, 95%);
+}
+.cantTwo {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.iconTwo {
+    width: 100px;
+    height: 100px;
+}
+.minTwo {
+    display: flex;
+    color: hsl(240, 15%, 95%);
+}
+.maxTwo {
+    display: flex;
+    color: hsl(240, 8%, 54%);
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import '@/app/week/Three.css'
 
 async function getData(city) {
   const response = await fetch(
@@ -19,7 +20,9 @@ async function Three() {
     const ciudad = "cochabamba";
     const { list, location, date } = await getData(ciudad);
     const currentDate = new Date().getDate();
-    const today = new Date(date);
+    const twoDay = new Date();
+    twoDay.setDate(currentDate + 4);
+    const twoDate = twoDay.getDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -38,35 +41,43 @@ async function Three() {
       "dic",
     ];
 
-    const formattedDate = `Today - ${
-      daysOfWeek[today.getDay()]
-    } ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
+    const formattedDate = ` ${
+      daysOfWeek[twoDay.getDay()]
+    } , ${twoDate} ${monthsOfYear[twoDay.getMonth()]}`;
 
 
   return (
-    <div>
+    <div className='three'>
       <div>
         {list.map((forecast, index) => {
           const forecastDate = new Date(forecast.dt_txt).getDate();
           console.log(forecastDate);
 
-          if (!hasShownForecast && currentDate === forecastDate) {
+          if (!hasShownForecast && twoDate === forecastDate) {
             hasShownForecast = true;
 
             
-            const temperatureKelvin = forecast.main.temp;
-            const temperatureCelsius = (temperatureKelvin - 273.15).toFixed(1);
+            const temperatureMin = forecast.main.temp_min;
+            const temperatureMax = forecast.main.temp_max;
+            const temperatureCelsiusMin = (temperatureMin - 273.15).toFixed(1);
+            const temperatureCelsiusMax = (temperatureMax - 273.15).toFixed(1);
 
             return (
-              <div key={index}>
+              <div className='centerThree' key={index}>
                 <p>{formattedDate}</p>
-                <img
+                <img className='iconTwo'
                   src={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`}
                   alt={forecast.weather[0].description}
                 />
-                <div>
-                <p>{temperatureCelsius}</p>
+                <div className='cantThree'>
+                <div className='minThree'>
+                <p>{temperatureCelsiusMin}</p>
                 <p>°C</p>    
+                </div>
+                <div className='maxThree'>
+                <p>{temperatureCelsiusMax}</p>
+                <p>°C</p>    
+                </div>
                 </div>
               </div>
             );
