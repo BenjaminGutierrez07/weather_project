@@ -21,8 +21,8 @@ async function Humidity() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const humidity = new Date();
-    humidity.setHours(humidity.getHours() + humidity.getTimezoneOffset() / 60);
-    humidity.setDate(currentDate + 5);
+    humidity.setUTCHours(humidity.getHours() + humidity.getTimezoneOffset() / 60);
+    humidity.setUTCDate(currentDate + 5);
     const humidityDate = humidity.getDate();
     let hasShownForecast = false;
 

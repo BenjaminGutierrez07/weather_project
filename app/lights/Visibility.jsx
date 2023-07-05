@@ -21,8 +21,8 @@ async function Visibility() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const visibility = new Date();
-    visibility.setHours(visibility.getHours() + visibility.getTimezoneOffset() / 60);
-    visibility.setDate(currentDate + 5);
+    visibility.setUTCHours(visibility.getHours() + visibility.getTimezoneOffset() / 60);
+    visibility.setUTCDate(currentDate + 5);
     const visibilityDate = visibility.getDate();
     let hasShownForecast = false;
 

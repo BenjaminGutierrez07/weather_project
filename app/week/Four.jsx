@@ -21,8 +21,8 @@ async function Four() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const fourDay = new Date();
-    fourDay.setHours(fourDay.getHours() + fourDay.getTimezoneOffset() / 60);
-    fourDay.setDate(currentDate + 5);
+    fourDay.setUTCHours(fourDay.getHours() + fourDay.getTimezoneOffset() / 60);
+    fourDay.setUTCDate(currentDate + 5);
     const fourDate = fourDay.getDate();
     let hasShownForecast = false;
 
@@ -51,7 +51,7 @@ async function Four() {
     <div className='four'>
       <div>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
           console.log(forecastDate);
 
           if (!hasShownForecast && fourDate === forecastDate) {

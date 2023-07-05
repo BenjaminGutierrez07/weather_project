@@ -18,11 +18,11 @@ async function getData(city) {
 
 async function One() {
     const ciudad = "cochabamba";
-    const { list, date } = await getData(ciudad);
+    const { list} = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const oneDay = new Date();
-    oneDay.setHours(oneDay.getHours() + oneDay.getTimezoneOffset() / 60);
-    oneDay.setDate(currentDate + 2);
+    oneDay.setUTCHours(oneDay.getHours() + oneDay.getTimezoneOffset() / 60);
+    oneDay.setUTCDate(currentDate + 2);
     const oneDate = oneDay.getDate();
     let hasShownForecast = false;
 
@@ -51,7 +51,7 @@ async function One() {
     <div className='one'>
       <div>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
           console.log(forecastDate);
 
           if (!hasShownForecast && oneDate === forecastDate) {

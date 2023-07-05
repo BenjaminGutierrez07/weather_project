@@ -20,7 +20,7 @@ async function Today() {
     const { list, location, date } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const today = new Date(date);
-    today.setHours(today.getHours() + today.getTimezoneOffset() / 60);
+    today.setUTCHours(today.getHours() + today.getTimezoneOffset() / 60);
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -69,7 +69,7 @@ async function Today() {
       </div>
       <div className="today">
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
           console.log(forecastDate);
 
           if (!hasShownForecast && currentDate === forecastDate) {

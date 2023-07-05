@@ -21,8 +21,8 @@ async function Air() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const air = new Date();
-    air.setHours(air.getHours() + air.getTimezoneOffset() / 60);
-    air.setDate(currentDate + 5);
+    air.setUTCHours(air.getHours() + air.getTimezoneOffset() / 60);
+    air.setUTCDate(currentDate + 5);
     const airDate = air.getDate();
     let hasShownForecast = false;
 

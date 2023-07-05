@@ -21,8 +21,8 @@ async function Wind() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const wind = new Date();
-    wind.setHours(wind.getHours() + wind.getTimezoneOffset() / 60);
-    wind.setDate(currentDate + 5);
+    wind.setUTCHours(wind.getHours() + wind.getTimezoneOffset() / 60);
+    wind.setUTCDate(currentDate + 5);
     const windDate = wind.getDate();
     let hasShownForecast = false;
 

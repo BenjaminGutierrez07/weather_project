@@ -21,8 +21,8 @@ async function Three() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const threeDay = new Date();
-    threeDay.setHours(threeDay.getHours() + threeDay.getTimezoneOffset() / 60);
-    threeDay.setDate(currentDate + 4);
+    threeDay.setUTCHours(threeDay.getHours() + threeDay.getTimezoneOffset() / 60);
+    threeDay.setUTCDate(currentDate + 4);
     const threeDate = threeDay.getDate();
     let hasShownForecast = false;
 
@@ -51,7 +51,7 @@ async function Three() {
     <div className='three'>
       <div>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
           console.log(forecastDate);
 
           if (!hasShownForecast && threeDate === forecastDate) {
