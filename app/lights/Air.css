@@ -3,7 +3,7 @@
     height: 100px;
     background-color: hsl(234, 32%, 17%);
 }
-@media screen and (min-width:300px) {
+@media (min-width: 300px) and (max-width:500px) {
     .air {
         width: 350px;
         height: 150px;

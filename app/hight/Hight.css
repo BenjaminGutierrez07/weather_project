@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
-@media screen and (min-width:300px) {
+@media (min-width: 300px) and (max-width:500px) {
     .size {
         width: 350px;
         height: 800px;
@@ -13,7 +13,7 @@
         flex-wrap: wrap;
     }
 }
-@media screen and (min-width:700px) {
+@media (min-width:700px) and (max-width: 900px) {
     .size {
         width: 600px;
         height: 200px;
@@ -32,7 +32,7 @@
     justify-content: space-evenly;
     gap: 3rem;
 }
-@media screen and (min-width:300px) {
+@media (min-width: 300px) and (max-width:500px) {
     .up {
         display: flex;
         flex-direction: column;
@@ -44,7 +44,7 @@
         gap: 2rem;
     }
 }
-@media screen and (min-width:700px) {
+@media (min-width:700px) and (max-width: 900px) {
     .up {
         width: 600px;
         display: flex;

@@ -9,7 +9,7 @@
 .dias {
     width: 700px;
 }
-@media screen and (min-width:300px) {
+@media (min-width: 300px) and (max-width:500px) {
     .days {
         width: 350px;
         height: 750px;
@@ -23,7 +23,7 @@
     }
 }
 
-@media screen and (min-width:700px) {
+@media (min-width:700px) and (max-width: 900px) {
     .days {
         width: 600px;
         height: 400px;
