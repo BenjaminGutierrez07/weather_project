@@ -23,7 +23,7 @@ async function Wind() {
     const wind = new Date();
     wind.setUTCHours(wind.getHours() + wind.getTimezoneOffset() / 60);
     wind.setUTCDate(currentDate + 5);
-    const windDate = wind.getDate();
+    const windDate = wind.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -50,7 +50,7 @@ async function Wind() {
   return (
     <div className='wind'>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
 
           if (!hasShownForecast && windDate === forecastDate) {
             hasShownForecast = true;

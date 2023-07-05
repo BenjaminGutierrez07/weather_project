@@ -21,7 +21,7 @@ async function Today() {
     const { list, location, date } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const today = new Date(date);
-    today.setUTCHours(today.getHours() + today.getTimezoneOffset() / 60);
+    today.setUTCHours(today.getUTCHours() + today.getTimezoneOffset() / 60);
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -46,7 +46,7 @@ async function Today() {
     console.log(formattedDate)
 
     const isDaytime = (forecastDayTime) => {
-      const forecastTime = new Date(forecastDayTime).getHours();
+      const forecastTime = new Date(forecastDayTime).getUTCHours();
       return forecastTime >= 6 && forecastTime < 20;
     };
 

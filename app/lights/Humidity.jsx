@@ -23,7 +23,7 @@ async function Humidity() {
     const humidity = new Date();
     humidity.setUTCHours(humidity.getHours() + humidity.getTimezoneOffset() / 60);
     humidity.setUTCDate(currentDate + 5);
-    const humidityDate = humidity.getDate();
+    const humidityDate = humidity.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -50,7 +50,7 @@ async function Humidity() {
   return (
     <div className='humidity'>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
 
           if (!hasShownForecast && humidityDate === forecastDate) {
             hasShownForecast = true;

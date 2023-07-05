@@ -23,7 +23,7 @@ async function Visibility() {
     const visibility = new Date();
     visibility.setUTCHours(visibility.getHours() + visibility.getTimezoneOffset() / 60);
     visibility.setUTCDate(currentDate + 5);
-    const visibilityDate = visibility.getDate();
+    const visibilityDate = visibility.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
@@ -50,7 +50,7 @@ async function Visibility() {
   return (
     <div className='visibility'>
         {list.map((forecast, index) => {
-          const forecastDate = new Date(forecast.dt_txt).getDate();
+          const forecastDate = new Date(forecast.dt_txt).getUTCDate();
 
           if (!hasShownForecast && visibilityDate === forecastDate) {
             hasShownForecast = true;

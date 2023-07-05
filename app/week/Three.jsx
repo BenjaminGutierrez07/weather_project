@@ -21,9 +21,9 @@ async function Three() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const threeDay = new Date();
-    threeDay.setUTCHours(threeDay.getHours() + threeDay.getTimezoneOffset() / 60);
+    threeDay.setUTCHours(threeDay.getUTCHours() + threeDay.getTimezoneOffset() / 60);
     threeDay.setUTCDate(currentDate + 4);
-    const threeDate = threeDay.getDate();
+    const threeDate = threeDay.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];

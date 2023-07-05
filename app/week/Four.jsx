@@ -21,9 +21,9 @@ async function Four() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const fourDay = new Date();
-    fourDay.setUTCHours(fourDay.getHours() + fourDay.getTimezoneOffset() / 60);
+    fourDay.setUTCHours(fourDay.getUTCHours() + fourDay.getTimezoneOffset() / 60);
     fourDay.setUTCDate(currentDate + 5);
-    const fourDate = fourDay.getDate();
+    const fourDate = fourDay.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];

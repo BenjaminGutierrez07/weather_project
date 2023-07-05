@@ -21,9 +21,9 @@ async function Tomorrow() {
     const { list } = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const tomorrow = new Date();
-    tomorrow.setUTCHours(tomorrow.getHours() + tomorrow.getTimezoneOffset() / 60);
+    tomorrow.setUTCHours(tomorrow.getUTCHours() + tomorrow.getTimezoneOffset() / 60);
     tomorrow.setUTCDate(currentDate + 1);
-    const tomorrowDate = tomorrow.getDate();
+    const tomorrowDate = tomorrow.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];

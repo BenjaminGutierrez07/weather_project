@@ -21,9 +21,9 @@ async function One() {
     const { list} = await getData(ciudad);
     const currentDate = new Date().getUTCDate();
     const oneDay = new Date();
-    oneDay.setUTCHours(oneDay.getHours() + oneDay.getTimezoneOffset() / 60);
+    oneDay.setUTCHours(oneDay.getUTCHours() + oneDay.getTimezoneOffset() / 60);
     oneDay.setUTCDate(currentDate + 2);
-    const oneDate = oneDay.getDate();
+    const oneDate = oneDay.getUTCDate();
     let hasShownForecast = false;
 
     const daysOfWeek = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
