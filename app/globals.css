@@ -11,6 +11,9 @@ body {
 }
 
 
+
+
+
 /*this is about the day*/
 .time {
     width: 35%;
@@ -48,6 +51,61 @@ body {
     border-radius: 150px;
     color: hsl(230, 7%, 83%);
 }
+@media screen and (min-width: 300px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time {
+        width: 430px;
+        height: 700px;
+        padding: 10px;
+        background-image: url("../public/nubes.png");
+        background-size: 550px;
+        background-position: center top 70px;
+        background-repeat: no-repeat;
+        background-color: hsl(234, 32%, 17%);
+        padding-top: 15px;
+        background-blend-mode: soft-light;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 700px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time {
+        width: 746px;
+        height: 700px;
+        padding: 10px;
+        background-image: url("../public/nubes.png");
+        background-size: 550px;
+        background-position: center top 70px;
+        background-repeat: no-repeat;
+        background-color: hsl(234, 32%, 17%);
+        padding-top: 15px;
+        background-blend-mode: soft-light;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
 
 
 
@@ -73,6 +131,27 @@ body {
     gap: 15px;
     margin-block-end: 30px;
 }
+@media screen and (min-width: 300px) {
+    .info {
+        width: 350px;
+        height: 1500px;
+        padding: 50px 50px;
+    }
+    .change {
+        display: none;
+    }
+}
+@media screen and (min-width: 700px) {
+    .info {
+        width: 666px;
+        height: 800px;
+        padding: 50px 50px;
+    }
+    .change {
+        display: none;
+    }
+}
+
 .change > button {
     width: 30px;
     height: 30px;
@@ -80,15 +159,34 @@ body {
     border-radius: 100px;
 }
 
-.days {
-    width: 860px;
-    height: 200px;
-}
-
-
 .lights {
     width: 700px;
     height: 100px;
+}
+
+@media screen and (min-width:300px) {
+    .lights{
+        width: 300px;
+    }
+    .subtitle {
+        width: 350px;
+        display: flex;
+        justify-content: left;
+        margin-block-end: 30px;
+        color:hsl(230, 7%, 83%);
+    }
+}
+@media screen and (min-width:700px) {
+    .lights{
+        width: 600px;
+    }
+    .subtitle {
+        width: 600px;
+        display: flex;
+        justify-content: left;
+        margin-block-end: 30px;
+        color:hsl(230, 7%, 83%);
+    }
 }
 
 

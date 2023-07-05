@@ -3,6 +3,14 @@
     height: 100px;
     background-color: hsl(234, 32%, 17%);
 }
+@media screen and (min-width:300px) {
+    .visibility {
+        width: 350px;
+        height: 150px;
+        background-color: hsl(234, 32%, 17%);
+    }
+}
+
 .centerVisibility {
     display: flex;
     flex-direction: column;

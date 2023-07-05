@@ -6,6 +6,35 @@
     justify-content: space-between;
     
 }
+.dias {
+    width: 700px;
+}
+@media screen and (min-width:300px) {
+    .days {
+        width: 350px;
+        height: 750px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .dias {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .days {
+        width: 600px;
+        height: 400px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .dias {
+        width: 600px;
+    }
+}
 
 .c {
     color: hsl(248, 35%, 8%);
@@ -13,7 +42,4 @@
 .f {
     background-color: hsl(230, 5%, 45%);
     color: hsl(230, 7%, 83%);
-}
-.dias {
-    width: 700px;
 }

@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 async function getData(city) {
@@ -48,6 +49,8 @@ async function Today() {
       const forecastTime = new Date(forecastDayTime).getHours();
       return forecastTime >= 6 && forecastTime < 20;
     };
+
+  
 
   return (
     <div className="time">

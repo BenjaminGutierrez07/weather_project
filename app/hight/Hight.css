@@ -5,7 +5,22 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
-
+@media screen and (min-width:300px) {
+    .size {
+        width: 350px;
+        height: 800px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:700px) {
+    .size {
+        width: 600px;
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 .up {
     display: flex;
@@ -16,4 +31,28 @@
     display: flex;
     justify-content: space-evenly;
     gap: 3rem;
+}
+@media screen and (min-width:300px) {
+    .up {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .down {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media screen and (min-width:700px) {
+    .up {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+    }
+    .down {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+    }
 }

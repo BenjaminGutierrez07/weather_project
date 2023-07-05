@@ -3,6 +3,21 @@
     height: 150px;
     background-color: hsl(234, 32%, 17%);
 }
+@media screen and (min-width:300px) {
+    .humidity {
+        width: 350px;
+        height: 150px;
+        background-color: hsl(234, 32%, 17%);
+    }
+}
+@media screen and (min-width:700px) {
+    .humidity {
+        width: 300px;
+        height: 150px;
+        background-color: hsl(234, 32%, 17%);
+    }
+}
+
 .centerHumidity {
     display: flex;
     flex-direction: column;
