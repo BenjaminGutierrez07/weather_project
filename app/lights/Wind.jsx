@@ -22,7 +22,7 @@ async function Wind() {
     const currentDate = new Date().getUTCDate();
     const wind = new Date();
     wind.setUTCHours(wind.getHours() + wind.getTimezoneOffset() / 60);
-    wind.setUTCDate(currentDate + 5);
+    wind.setUTCDate(currentDate);
     const windDate = wind.getUTCDate();
     let hasShownForecast = false;
 
@@ -61,7 +61,7 @@ async function Wind() {
 
             return (
               <div className="centerWind" key={index}>
-                <p>Wind Status</p>
+                <p className='wTitle'>Wind Status</p>
                 <div className="line">
                   <p className="num">{velocidad_mph}</p>
                   <p className="numTwo">mph</p>

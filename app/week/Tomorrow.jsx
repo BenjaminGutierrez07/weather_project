@@ -22,7 +22,7 @@ async function Tomorrow() {
     const currentDate = new Date().getUTCDate();
     const tomorrow = new Date();
     tomorrow.setUTCHours(tomorrow.getUTCHours() + tomorrow.getTimezoneOffset() / 60);
-    tomorrow.setUTCDate(currentDate + 1);
+    tomorrow.setUTCDate(currentDate+0);
     const tomorrowDate = tomorrow.getUTCDate();
     let hasShownForecast = false;
 

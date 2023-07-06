@@ -22,7 +22,7 @@ async function Four() {
     const currentDate = new Date().getUTCDate();
     const fourDay = new Date();
     fourDay.setUTCHours(fourDay.getUTCHours() + fourDay.getTimezoneOffset() / 60);
-    fourDay.setUTCDate(currentDate + 5);
+    fourDay.setUTCDate(currentDate + 4);
     const fourDate = fourDay.getUTCDate();
     let hasShownForecast = false;
 

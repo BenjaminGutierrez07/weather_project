@@ -2,6 +2,7 @@ import Today from "./weathertoday/Today";
 import Semana from "./infoWeek/Semana";
 import Hight from "./hight/Hight";
 
+
 function Home() {
   
   return (

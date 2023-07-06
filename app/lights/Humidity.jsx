@@ -22,7 +22,7 @@ async function Humidity() {
     const currentDate = new Date().getUTCDate();
     const humidity = new Date();
     humidity.setUTCHours(humidity.getHours() + humidity.getTimezoneOffset() / 60);
-    humidity.setUTCDate(currentDate + 5);
+    humidity.setUTCDate(currentDate);
     const humidityDate = humidity.getUTCDate();
     let hasShownForecast = false;
 
@@ -46,7 +46,7 @@ async function Humidity() {
       daysOfWeek[humidity.getDay()]
     } , ${humidity} ${monthsOfYear[humidity.getMonth()]}`;
 
-
+    const percent = 50;
   return (
     <div className='humidity'>
         {list.map((forecast, index) => {
@@ -61,12 +61,19 @@ async function Humidity() {
 
             return (
               <div className="centerHumidity" key={index}>
-                <p>Humidity</p>
-                <div className='hu'>
-                <p className='huTwo'>{humidid}</p>
-                <p className='por'>%</p>
+                <p className='hHum'>Humidity</p>
+                <div className="hu">
+                  <p className="huTwo">{humidid}</p>
+                  <p className="por">%</p>
                 </div>
-
+                <div className='percent'>
+                    <p>0</p>
+                    <p>50</p>
+                    <p>100</p>
+                  </div>
+                <div className="progress-bar">
+                  <div className="progress" style={{width: humidid}}></div>
+                </div>
               </div>
             );
           }

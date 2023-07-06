@@ -22,7 +22,7 @@ async function Three() {
     const currentDate = new Date().getUTCDate();
     const threeDay = new Date();
     threeDay.setUTCHours(threeDay.getUTCHours() + threeDay.getTimezoneOffset() / 60);
-    threeDay.setUTCDate(currentDate + 4);
+    threeDay.setUTCDate(currentDate + 3);
     const threeDate = threeDay.getUTCDate();
     let hasShownForecast = false;
 

@@ -22,7 +22,7 @@ async function Air() {
     const currentDate = new Date().getUTCDate();
     const air = new Date();
     air.setUTCHours(air.getHours() + air.getTimezoneOffset() / 60);
-    air.setUTCDate(currentDate + 5);
+    air.setUTCDate(currentDate);
     const airDate = air.getUTCDate();
     let hasShownForecast = false;
 

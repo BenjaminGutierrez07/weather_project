@@ -22,7 +22,7 @@ async function Visibility() {
     const currentDate = new Date().getUTCDate();
     const visibility = new Date();
     visibility.setUTCHours(visibility.getHours() + visibility.getTimezoneOffset() / 60);
-    visibility.setUTCDate(currentDate + 5);
+    visibility.setUTCDate(currentDate);
     const visibilityDate = visibility.getUTCDate();
     let hasShownForecast = false;
 

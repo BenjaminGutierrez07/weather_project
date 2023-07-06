@@ -21,13 +21,14 @@
 
 .nameA{
     margin-block-end: 0;
+    font-size: 13px;
 }
 .airC {
     display: flex;
 }
 .numA {
     margin: 0;
-    font-size: 30px;
+    font-size: 50px;
 }
 .mb {
     margin: 0;

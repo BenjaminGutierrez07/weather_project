@@ -25,13 +25,36 @@
     align-items: center;
     color: hsl(240, 15%, 95%);
 }
+.hHum {
+        font-size: 13px;
+        color: #E7E7EB;
+}
+.percent {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+.percent > p {
+    font-size: 7px;
+}
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
 
+  .progress {
+    height: 100%;
+    background-color: yellow;
+    border-radius: 5px;
+  }
 .hu {
     display: flex;
 }
 .huTwo {
     margin: 0;
-    font-size: 50px;
+    font-size: 55px;
 }
 .por {
     margin: 0;

@@ -42,7 +42,7 @@ async function Today() {
 
     const formattedDate = `Today . ${
       daysOfWeek[today.getDay()]
-    } ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
+    }, ${today.getDate()} ${monthsOfYear[today.getMonth()]}`;
     console.log(formattedDate)
 
     const isDaytime = (forecastDayTime) => {

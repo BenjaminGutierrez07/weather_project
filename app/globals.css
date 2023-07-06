@@ -123,6 +123,7 @@ body {
     justify-content: left;
     margin-block-end: 20px;
     color:hsl(230, 7%, 83%);
+    font-size: 20px;
 }
 .change {
     width: 700px;
@@ -223,17 +224,20 @@ body {
     display: flex;
     justify-content: center;
     color: hsl(240, 8%, 54%);
-    font-size: 25px;
+    font-size: 35px;
+    font-family: 'Raleway';
 }
 .date {
     display: flex;
     justify-content: center;
     color: hsl(240, 8%, 54%);
+    font-size: 17px;
 }
 .locations {
     display: flex;
     justify-content: center;
     color: hsl(240, 8%, 54%);
+    font-size: 12px;
 }
 .flecha {
     display: flex;

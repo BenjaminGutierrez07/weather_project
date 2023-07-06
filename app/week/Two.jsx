@@ -22,7 +22,7 @@ async function Two() {
     const currentDate = new Date().getUTCDate();
     const twoDay = new Date();
     twoDay.setUTCHours(twoDay.getUTCHours() + twoDay.getTimezoneOffset() / 60);
-    twoDay.setUTCDate(currentDate + 3);
+    twoDay.setUTCDate(currentDate + 2);
     const twoDate = twoDay.getUTCDate();
     let hasShownForecast = false;
 
