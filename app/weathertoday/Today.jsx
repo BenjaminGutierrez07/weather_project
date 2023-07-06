@@ -103,7 +103,7 @@ async function Today() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-geo-alt-fill"
+                      className="bi bi-geo-alt-fill"
                       viewBox="0 0 16 16"
                       style={{color:'hsl(240, 8%, 54%)'}}
                     >

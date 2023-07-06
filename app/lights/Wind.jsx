@@ -73,7 +73,7 @@ async function Wind() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-cursor-fill"
+                      className="bi bi-cursor-fill"
                       viewBox="0 0 16 16"
                       style={{transform: 'scale(-1)'}}
                     >
